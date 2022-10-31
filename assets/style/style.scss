@@ -152,7 +152,7 @@ time {
 }
 
 .timeline ul li.in-view::after {
-  background: #f45b69;
+  background: whitesmoke;
 }
 
 .timeline ul li div {
@@ -206,7 +206,7 @@ time {
   .timeline ul li.left div::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
-    border-color: transparent #f45b69 transparent transparent;
+    border-color: transparent $bubble-left-color transparent transparent;
   }
 }
 
