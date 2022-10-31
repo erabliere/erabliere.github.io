@@ -5,10 +5,6 @@ export default defineNuxtPlugin(nuxtApp => {
   (function (window) {
     "use strict";
   
-    console.log('LOADED')
-    // define variables
-    
-  
     // check if an element is in viewport
     // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
     function isElementInViewport(el) {
@@ -24,7 +20,7 @@ export default defineNuxtPlugin(nuxtApp => {
   
     function callbackFunc() {
       const items = window.document.querySelectorAll(".timeline li");
-      console.log('callbackFunc', items.length)
+
       for (var i = 0; i < items.length; i++) {
         
         if (isElementInViewport(items[i])) {
