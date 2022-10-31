@@ -13,7 +13,7 @@ function filterPosts(post) {
 }
 
 const { data } = await useFetch(
-  'https://erabliere.github.io/web/posts.json',
+  'https://erabliere.ga/web/posts.json',
   {
     transform: data => {
       data.posts = data.posts.map((post) => {
