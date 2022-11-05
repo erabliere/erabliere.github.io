@@ -39,7 +39,7 @@ const { data } = await useFetch(
 <template>
   <section class="timeline">
     <ul>
-      <li v-for="post in data.posts" :class="post.align">
+      <li v-for="post in data.posts" :class="post.align" class="event">
         <!-- <time>{{ post.short_date }}</time>
         <time>{{ post.short_time }}</time> -->
         <div v-html="post.content_html"></div>
