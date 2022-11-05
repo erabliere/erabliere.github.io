@@ -3,5 +3,9 @@ export default defineNuxtConfig({
 
     css: ["@/assets/style/style.scss"],
     plugins: [{ src: '@/plugins/script.js' }],
-    ssr: false
+    ssr: false,
+    head: {
+        link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    }
+
 })
