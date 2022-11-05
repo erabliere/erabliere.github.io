@@ -16,7 +16,7 @@ export default defineNuxtPlugin(nuxtApp => {
   }
 
   function callbackFunc() {
-    const items = window.document.querySelectorAll(".timeline li");
+    const items = window.document.querySelectorAll(".timeline li.event");
 
     for (var i = 0; i < items.length; i++) {
 
