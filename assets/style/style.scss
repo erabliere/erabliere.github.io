@@ -52,15 +52,30 @@ body {
 
 .timeline ul li.event p strong {
   text-decoration: underline overline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.tag {
+  text-decoration: underline overline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+.timeline ul li.event p strong:hover{
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.8);
+}
+.tag:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.8);
 }
 
-.timeline ul li.event div img {
+.timeline ul li.event div.content img {
   float: left;
   margin: 7px;
   max-inline-size: 100%;
   block-size: auto;
 }
-.timeline ul li.event div::after {
+.timeline ul li.event div.content::after {
   content: "";
   display: block;
   clear: both;
@@ -79,7 +94,7 @@ body {
   z-index: 1;
 }
 
-.timeline ul li.event div {
+.timeline ul li.event div.content {
   position: relative;
   bottom: 0;
   width: 400px;
@@ -87,7 +102,7 @@ body {
   border-radius: 5px 5px 5px 5px;
 }
 
-.timeline ul li.event div::before {
+.timeline ul li.event div.content.post::before {
   content: "";
   position: absolute;
   bottom: 7px;
@@ -96,23 +111,29 @@ body {
   border-style: solid;
 }
 
-.timeline ul li.event.right div {
+.timeline ul li.event.right div.content {
   left: 45px;
+}
+
+.timeline ul li.event.right div.content.post {
   background: $bubble-right-color;
 }
 
-.timeline ul li.event.left div {
+.timeline ul li.event.left div.content {
   left: -439px;
+}
+
+.timeline ul li.event.left div.content.post {
   background: $bubble-left-color;
 }
 
-.timeline ul li.event.right div::before {
+.timeline ul li.event.right div.content::before {
   left: -15px;
   border-width: 8px 16px 8px 0;
   border-color: transparent $bubble-right-color transparent transparent;
 }
 
-.timeline ul li.event.left div::before {
+.timeline ul li.event.left div.content::before {
   right: -15px;
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent $bubble-left-color;
@@ -121,11 +142,20 @@ body {
 
 
 
-time {
+.content.info {
   display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
+}
+.content.info .tagline {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.content.info .datetime{
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+.content.info .title {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -137,24 +167,24 @@ time {
 }
 
 .timeline ul li.event.in-view::after {
-  background: black;
+  background: rgb(109, 106, 106);
 }
 
-.timeline ul li.event div {
+.timeline ul li.event div.content {
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
 
-.timeline ul li.event.right div {
+.timeline ul li.event.right div.content {
   transform: translate3d(200px, 0, 0);
 }
 
-.timeline ul li.event.left div {
+.timeline ul li.event.left div.content {
   transform: translate3d(-200px, 0, 0);
 }
 
-.timeline ul li.event.in-view div {
+.timeline ul li.event.in-view div.content {
   transform: none;
   visibility: visible;
   opacity: 1;
@@ -180,15 +210,15 @@ time {
     margin-left: 20px;
   }
 
-  .timeline ul li.event div {
+  .timeline ul li.event div.content {
     width: calc(100vw - 91px);
   }
 
-  .timeline ul li.event.left div {
+  .timeline ul li.event.left div.content {
     left: 45px;
   }
 
-  .timeline ul li.event.left div::before {
+  .timeline ul li.event.left div.content::before {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent $bubble-left-color transparent transparent;
@@ -208,7 +238,7 @@ time {
   clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
-.timeline-rhombus ul li.event div::before {
+.timeline-rhombus ul li.event div.content::before {
   bottom: 12px;
 }
 
