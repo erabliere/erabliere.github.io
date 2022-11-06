@@ -45,7 +45,7 @@ const { data } = await useFetch(
           <div class="title">{{ post.title }}</div>
           <div class="tagline" v-html="post.tagline"></div>
         </div>
-        <div v-html="post.content_html" class="content post"></div>
+        <div v-html="post.content_html" class="content post text-sm"></div>
       </li>
     </ul>
   </section>
