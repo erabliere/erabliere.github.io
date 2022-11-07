@@ -15,7 +15,7 @@ export default defineNuxtPlugin(nuxtApp => {
     return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.top <= clientHeight / 2
+      (rect.top <= clientHeight / 2 || rect.bottom <= clientHeight / 2)
       /*(window.innerHeight || document.documentElement.clientHeight)  &&
       rect.right <= (window.innerWidth || document.documentElement.clientWidth) */
     );
