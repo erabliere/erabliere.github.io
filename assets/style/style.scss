@@ -33,6 +33,21 @@ body {
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+
+.timeline blockquote {
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  border-left: 4px solid #bebfbe;
+  display: inline-flex;
+}
+
+.timeline blockquote p {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
 .timeline ul {
   padding: 50px 0;
 }
@@ -56,15 +71,18 @@ body {
   text-underline-offset: 3px;
   cursor: pointer;
 }
+
 .tag {
   text-decoration: underline overline;
   text-underline-offset: 3px;
   cursor: pointer;
 }
-.timeline ul li.event p strong:hover{
+
+.timeline ul li.event p strong:hover {
   background-color: rgba(255, 255, 255, 0.9);
   color: rgba(0, 0, 0, 0.8);
 }
+
 .tag:hover {
   background-color: rgba(255, 255, 255, 0.9);
   color: rgba(0, 0, 0, 0.8);
@@ -76,6 +94,7 @@ body {
   max-inline-size: 100%;
   block-size: auto;
 }
+
 .timeline ul li.event div.content::after {
   content: "";
   display: block;
@@ -146,14 +165,17 @@ body {
 .content.info {
   display: block;
 }
+
 .content.info .tagline {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.5);
 }
-.content.info .datetime{
+
+.content.info .datetime {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.5);
 }
+
 .content.info .title {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.8);
