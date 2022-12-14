@@ -15,11 +15,11 @@ export default defineNuxtConfig({
                 {
                     src: "https://polyfill.io/v3/polyfill.min.js?features=es6",
                     async: true
-                },
+                }/* ,
                 {
                     src: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
                     async: true
-                }
+                } */
             ]
         }
     },
