@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     modules: [
         '@unocss/nuxt'
     ],
-    plugins: [{ src: '@/plugins/script.js' }],
+    plugins: [{ src: '@/plugins/script.js' }, { src: '@/plugins/inject_post_scripts.js' }],
     ssr: false,
     app: {
         head: {
